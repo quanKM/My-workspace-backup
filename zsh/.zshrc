@@ -118,3 +118,4 @@ export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # Aliases
 alias cl=clear
+alias gohome='sudo shutdown -h 0'
