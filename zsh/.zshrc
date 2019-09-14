@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 export DEFAULT_USER=$(whoami)
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -65,16 +65,10 @@ HIST_STAMPS="yyyy-mm-dd"
 plugins=(
   git
   docker
-  docker-compose
-  yarn
   laravel
-  npm
-  node
-  nvm
-  composer
-  vscode
   zsh-autosuggestions
   zsh-syntax-highlighting
+  last-working-dir
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -122,3 +116,6 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 if [ -f $HOME/.zsh-aliases ]; then
   . $HOME/.zsh-aliases
 fi
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
